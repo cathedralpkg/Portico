@@ -1,0 +1,155 @@
+
++------------------------------------+
+|                   _   _            |
+|  _ __   ___  _ __| |_(_) ___ ___   |
+| | '_ \ / _ \| '__| __| |/ __/ _ \  |
+| | |_) | (_) | |  | |_| | (_| (_) | |
+| | .__/ \___/|_|   \__|_|\___\___/  |
+| |_|                                |
+|                                    |
+| Projection Onto Roto-Translational |
+|     and Internal COordinates       |
++------------------------------------+
+
+   - input file         : portico.inp
+
+   - frequency tolerance: 6.00 cm-1
+   - bonding threshold  : 1.30
+   - linear  cutoff     : 170.00 degrees
+   - current random seed: 1791562135
+   - stationary point   : True
+
+   - atom mapping       : OK
+
+* FRAGMENT 1
+  - filename   : P1.gts
+  - num atoms  : 2
+  - mol formula: CO
+    [ 1]  C     +1.21805   +0.00000   +0.00000  [ 1 in TS]
+    [ 2]  O     -0.91383   +0.00000   +0.00000  [ 2 in TS]
+  - linear product? True
+  - number vib. dofs: 1
+  - Cartesian coordinate frequencies (1/cm):
+      2279.4
+  - Internal coordinates (using TS numeration)
+    num ics: 1
+     1-2  
+
+* FRAGMENT 2
+  - filename   : P2.gts
+  - num atoms  : 2
+  - mol formula: H(2)
+    [ 1]  H     +0.71605   -0.00000   -0.00000  [ 3 in TS]
+    [ 2]  H     -0.71605   -0.00000   +0.00000  [ 4 in TS]
+  - linear product? True
+  - number vib. dofs: 1
+  - Cartesian coordinate frequencies (1/cm):
+      4410.4
+  - Internal coordinates (using TS numeration)
+    num ics: 1
+     3-4  
+
+* DIVIDING SURFACE
+  - filename   : TS.gts
+  - num atoms  : 4
+  - mol formula: CH(2)O
+    [ 1]  C     -1.06337   -0.11586   +0.00000  [fragment 1]
+    [ 2]  O     +1.13157   -0.11884   +0.00000  [fragment 1]
+    [ 3]  H     -3.06557   +0.51362   +0.00000  [fragment 2]
+    [ 4]  H     -2.23184   +2.75194   +0.00000  [fragment 2]
+  - linear? False
+  - number vib. dofs: 6
+  - Cartesian coordinate frequencies (1/cm):
+     -1985.1    843.2    920.9   1447.0   1980.5
+      3170.7
+
+* Translational vectors of fragment 1...
+    C  |  +0.707  +0.000  +0.000  |  +0.000  +0.707  +0.000  |  +0.000  +0.000  +0.707  |  
+    O  |  +0.707  +0.000  +0.000  |  +0.000  +0.707  +0.000  |  +0.000  +0.000  +0.707  |  
+    H  |  +0.000  +0.000  +0.000  |  +0.000  +0.000  +0.000  |  +0.000  +0.000  +0.000  |  
+    H  |  +0.000  +0.000  +0.000  |  +0.000  +0.000  +0.000  |  +0.000  +0.000  +0.000  |  
+
+* Translational vectors of fragment 2...
+    C  |  +0.000  +0.000  +0.000  |  +0.000  +0.000  +0.000  |  +0.000  +0.000  +0.000  |  
+    O  |  +0.000  +0.000  +0.000  |  +0.000  +0.000  +0.000  |  +0.000  +0.000  +0.000  |  
+    H  |  +0.707  +0.000  +0.000  |  +0.000  +0.707  +0.000  |  +0.000  +0.000  +0.707  |  
+    H  |  +0.707  +0.000  +0.000  |  +0.000  +0.707  +0.000  |  +0.000  +0.000  +0.707  |  
+
+* Rotational vectors for fragment 1...
+    C  |  +0.000  +0.000  +0.707  |  -0.001  -0.707  +0.000  |  
+    O  |  +0.000  +0.000  -0.707  |  +0.001  +0.707  +0.000  |  
+    H  |  +0.000  +0.000  +0.000  |  +0.000  +0.000  +0.000  |  
+    H  |  +0.000  +0.000  +0.000  |  +0.000  +0.000  +0.000  |  
+
+* Rotational vectors for fragment 2...
+    C  |  +0.000  +0.000  +0.000  |  +0.000  +0.000  +0.000  |  
+    O  |  +0.000  +0.000  +0.000  |  +0.000  +0.000  +0.000  |  
+    H  |  +0.000  +0.000  +0.707  |  -0.663  +0.247  +0.000  |  
+    H  |  +0.000  +0.000  -0.707  |  +0.663  -0.247  +0.000  |  
+
+* Generating B matrix...
+  shape = (12, 12)
+  rank  = 12
+  full rank = True
+
+  number of vibrational   rows: 2
+  number of translational rows: 6
+  number of rotational    rows: 4
+
+  checking orthogonality between rows using eps = 1.0E-06:
+
+    vib-vib: all zero
+    tra-tra: all zero
+    rot-rot: all zero
+    vib-tra: all zero
+    vib-rot: all zero
+    tra-rot: all zero
+
+
+* cc-frequencies vs ic-frequencies...
+    ( 1)  -1985.1    -1985.1   (cm^-1)
+    ( 2)    843.2      843.2   (cm^-1)
+    ( 3)    920.9      920.9   (cm^-1)
+    ( 4)   1447.0     1447.0   (cm^-1)
+    ( 5)   1980.5     1980.5   (cm^-1)
+    ( 6)   3170.7     3170.7   (cm^-1)
+
+    * SET IS VALID!!!
+
+* Analyzing modes...
+------------------------------------------------------------------------------
+ int.coord. | -1985.10 |   843.20 |   920.93 |  1446.98 |  1980.46 |  3170.69 
+------------------------------------------------------------------------------
+ 1-2        |    0.001 |    0.001 |    0.000 |    0.004 |    0.403 |    0.016 
+ 3-4        |    0.547 |    0.031 |    0.000 |    0.826 |    0.221 |    0.069 
+------------------------------------------------------------------------------
+ trx1       |    0.000 |    0.003 |    0.000 |    0.000 |    0.001 |    0.003 
+ try1       |    0.003 |    0.000 |    0.000 |    0.001 |    0.001 |    0.000 
+ trz1       |    0.000 |    0.000 |    0.003 |    0.000 |    0.000 |    0.000 
+ trx2       |    0.025 |    0.452 |    0.000 |    0.017 |    0.197 |    0.386 
+ try2       |    0.401 |    0.001 |    0.000 |    0.123 |    0.119 |    0.005 
+ trz2       |    0.000 |    0.000 |    0.286 |    0.000 |    0.000 |    0.000 
+ rotA1      |    0.000 |    0.000 |    0.016 |    0.000 |    0.000 |    0.000 
+ rotB1      |    0.009 |    0.017 |    0.000 |    0.005 |    0.001 |    0.000 
+ rotA2      |    0.000 |    0.000 |    0.695 |    0.000 |    0.000 |    0.000 
+ rotB2      |    0.013 |    0.495 |    0.000 |    0.024 |    0.057 |    0.520 
+------------------------------------------------------------------------------
+ weight:    |    0.452 |    0.968 |    1.000 |    0.170 |    0.376 |    0.914 
+------------------------------------------------------------------------------
+
+
+* Mode classification:
+
+      freq (cm^-1)   Omega_i  
+    --------------------------
+        -1985.1        ifreq   [roto-translational]
+          920.9        1.000   [roto-translational]
+          843.2        0.968   [roto-translational]
+         3170.7        0.914   [roto-translational]
+         1980.5        0.376
+         1447.0        0.170
+
+         Delta Omega = 0.538
+
+- Creating plot with weights: omega_test1.png
+

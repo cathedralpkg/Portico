@@ -1,0 +1,11 @@
+%nproc=2
+%mem=2GB
+#p wb97xd def2svp
+int=ultrafine
+scf=verytight
+
+test 2 : product 2 (H)
+
+0 2
+ 1   +0.00000000E+00  +0.00000000E+00  +0.00000000E+00
+

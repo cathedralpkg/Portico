@@ -1,0 +1,16 @@
+%nproc=2
+%mem=2GB
+#p wb97xd def2svp
+int=ultrafine
+scf=verytight
+opt=verytight
+freq=noraman
+
+test 1 : reactant (H2CO)
+
+0 1
+ C                  0.06531700    0.63705700    0.00000000
+ O                  0.06531700   -0.72031200    0.00000000
+ H                 -0.77349800    1.02224000   -0.64538100
+ H                  0.06531700    1.01914100    1.01356000
+

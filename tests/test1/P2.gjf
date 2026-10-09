@@ -1,0 +1,14 @@
+%nproc=2
+%mem=2GB
+#p wb97xd def2svp
+int=ultrafine
+scf=verytight
+opt=verytight
+freq=noraman
+
+test 1 : product 2 (H2)
+
+0 1
+ 1   -0.994026    1.153307    0.171088
+ 1    0.018409    1.090936    0.128720
+

@@ -1,0 +1,15 @@
+%nproc=2
+%mem=2GB
+#p wb97xd def2svp
+int=ultrafine
+scf=verytight
+opt=verytight
+freq=noraman
+
+test 4 : product 2 (CO2)
+
+0 1
+ 6    0.000000    0.000000    0.000000
+ 8   -1.200000    0.000000    0.000000
+ 8   +1.200000    0.000000    0.000000
+

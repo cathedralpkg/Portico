@@ -1,0 +1,16 @@
+%nproc=2
+%mem=2GB
+#p wb97xd def2svp
+int=ultrafine
+scf=verytight
+opt=verytight
+freq=noraman
+
+test 3 : product 1 (H2CO)
+
+1 2
+ 8     0.000000   -0.663761    0.000000
+ 6     0.000000    0.522742    0.000000
+ 1     0.000000    1.086815   -0.977533
+ 1     0.000000    1.086815    0.977533
+

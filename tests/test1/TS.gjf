@@ -1,0 +1,16 @@
+%nproc=2
+%mem=2GB
+#p wb97xd def2svp
+int=ultrafine
+scf=verytight
+opt=(ts,calcfc,noeigentest,verytight)
+freq=noraman
+
+test 1 : transition state
+
+0 1
+C     0.000000     0.000000     0.000000
+O     1.151000     0.000000     0.000000
+H    -1.048323     0.346172     0.000000
+H    -0.606936     1.465273     0.000000
+

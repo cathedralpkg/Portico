@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cathedralpkg-portico"
+version = "2026.1.4"
+description = "Asymptotic classification of transition-state normal modes via projection onto roto-translational and internal coordinates"
+readme = "README.md"
+license = "MIT"
+authors = [
+  { name = "David Ferro-Costas", email = "david.ferro@usc.es" },
+]
+requires-python = ">=3.8"
+dependencies = [
+  "numpy",
+  "scipy",
+  "matplotlib",
+  "ase",
+]
+keywords = ["transition state", "normal modes", "internal coordinates",
+            "fragmentation", "computational chemistry"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Chemistry",
+]
+
+[project.urls]
+Homepage = "https://github.com/cathedralpkg/portico"
+
+[project.scripts]
+portico      = "portico:main"
+gaussian2gts = "gaussian2gts:main"
+
+[tool.setuptools]
+py-modules = ["portico", "gaussian2gts"]

@@ -1,0 +1,17 @@
+%nproc=2
+%mem=2GB
+#p wb97xd def2svp
+int=ultrafine
+scf=verytight
+opt=verytight
+freq=noraman
+
+test 2 : reactant (CH2OH)
+
+0 2
+ 8   -1.181178   -0.111833   -0.161277
+ 6   -0.124092    0.479975    0.053043
+ 1    1.210075   -0.188199   -0.024956
+ 1   -0.151977    1.533297    0.409806
+ 1   -1.601178   -0.611833   -0.661277
+
